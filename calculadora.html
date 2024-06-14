@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +7,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator">
+    <div class="calculadora">
         <h1>Calculadora Binária</h1>
-        <div id="homeScreen" class="screen">
-            <button onclick="showScreen('decimalToBinaryScreen')">Conversão Decimal para Binário</button>
-            <button onclick="showScreen('binaryOperationScreen')">Operações Binárias</button>
-            <button onclick="showScreen('twosComplementScreen')">Conversão para Complemento de 2</button>
-            <button onclick="showScreen('hexAndOctalScreen')">Conversão para Hexadecimal e Octal</button>
+        <div id="telaInicial" class="tela">
+            <button onclick="mostrarTela('telaDecimalParaBinario')">Conversão Decimal para Binário</button>
+            <button onclick="mostrarTela('telaOperacoesBinarias')">Operações Binárias</button>
+            <button onclick="mostrarTela('telaComplementoDe2')">Conversão para Complemento de 2</button>
+            <button onclick="mostrarTela('telaHexEOctal')">Conversão para Hexadecimal e Octal</button>
         </div>
-        <div id="decimalToBinaryScreen" class="screen" style="display: none;">
+        <div id="telaDecimalParaBinario" class="tela" style="display: none;">
             <h2>Conversão Decimal para Binário</h2>
-            <input type="number" id="decimalInput" placeholder="Número decimal">
-            <button onclick="decimalToBinary()">Converter</button>
-            <p>Binário: <span id="binaryOutput"></span></p>
-            <button onclick="showScreen('homeScreen')">Voltar</button>
+            <input type="number" id="entradaDecimal" placeholder="Número decimal">
+            <button onclick="decimalParaBinario()">Converter</button>
+            <p>Binário: <span id="saidaBinario"></span></p>
+            <button onclick="mostrarTela('telaInicial')">Voltar</button>
         </div>
-        <div id="binaryOperationScreen" class="screen" style="display: none;">
+        <div id="telaOperacoesBinarias" class="tela" style="display: none;">
             <h2>Operações Binárias</h2>
-            <input type="text" id="bin1" placeholder="Binário 1">
-            <input type="text" id="bin2" placeholder="Binário 2">
-            <button onclick="binaryOperation('add')">Somar</button>
-            <button onclick="binaryOperation('subtract')">Subtrair</button>
-            <button onclick="binaryOperation('multiply')">Multiplicar</button>
-            <button onclick="binaryOperation('divide')">Dividir</button>
-            <p>Resultado: <span id="operationOutput"></span></p>
-            <button onclick="showScreen('homeScreen')">Voltar</button>
+            <input type="text" id="binario1" placeholder="Binário 1">
+            <input type="text" id="binario2" placeholder="Binário 2">
+            <button onclick="operacaoBinaria('somar')">Somar</button>
+            <button onclick="operacaoBinaria('subtrair')">Subtrair</button>
+            <button onclick="operacaoBinaria('multiplicar')">Multiplicar</button>
+            <button onclick="operacaoBinaria('dividir')">Dividir</button>
+            <p>Resultado: <span id="saidaOperacao"></span></p>
+            <button onclick="mostrarTela('telaInicial')">Voltar</button>
         </div>
-        <div id="twosComplementScreen" class="screen" style="display: none;">
+        <div id="telaComplementoDe2" class="tela" style="display: none;">
             <h2>Conversão para Complemento de 2</h2>
-            <input type="text" id="binaryInput" placeholder="Número binário">
-            <button onclick="toTwosComplement()">Converter</button>
-            <p>Complemento de 2: <span id="twosComplementOutput"></span></p>
-            <button onclick="showScreen('homeScreen')">Voltar</button>
+            <input type="text" id="entradaBinaria" placeholder="Número binário">
+            <button onclick="paraComplementoDe2()">Converter</button>
+            <p>Complemento de 2: <span id="saidaComplementoDe2"></span></p>
+            <button onclick="mostrarTela('telaInicial')">Voltar</button>
         </div>
-        <div id="hexAndOctalScreen" class="screen" style="display: none;">
+        <div id="telaHexEOctal" class="tela" style="display: none;">
             <h2>Conversão para Hexadecimal e Octal</h2>
-            <input type="text" id="binaryInputConv" placeholder="Número binário">
-            <button onclick="convertBinToHexAndOct()">Converter</button>
-            <p>Hexadecimal: <span id="hexOutput"></span></p>
-            <p>Octal: <span id="octalOutput"></span></p>
-            <button onclick="showScreen('homeScreen')">Voltar</button>
+            <input type="text" id="entradaBinariaConv" placeholder="Número binário">
+            <button onclick="converterBinParaHexEOct()">Converter</button>
+            <p>Hexadecimal: <span id="saidaHex"></span></p>
+            <p>Octal: <span id="saidaOctal"></span></p>
+            <button onclick="mostrarTela('telaInicial')">Voltar</button>
         </div>
     </div>
     <script src="script.js"></script>
